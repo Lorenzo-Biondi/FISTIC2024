@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
-import xlsxwriter
 import io
 
 def convert_to_excel(df):
     output = io.BytesIO()
-    writer = pd.ExcelWriter(output, engine="xlsxwriter")
+    writer = pd.ExcelWriter(output, engine="xlsxwriter",index=False)
     df.to_excel(writer, sheet_name="data")
     # see: https://xlsxwriter.readthedocs.io/working_with_pandas.html
     writer.close()
