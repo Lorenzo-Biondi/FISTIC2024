@@ -5,3 +5,5 @@ pillow
 joblib
 scikit-learn
 streamlit-folium
+xlsx-writer
+openpyxl
